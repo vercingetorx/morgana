@@ -1,0 +1,10 @@
+numpy
+opencv-python-headless
+Pillow
+onnx
+onnxruntime
+torch
+
+# Optional:
+# tqdm # progress bar
+# insightface # alternate backend
