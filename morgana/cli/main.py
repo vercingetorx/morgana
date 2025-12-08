@@ -266,13 +266,12 @@ def main() -> None:
         # Determine effective swapper model path based on --swapper choice.
         # When using Hyperswap/ReSwapper, map the short variant name to the
         # corresponding ONNX under models/.
-        default_inswapper = config.default_swapper_path()
         if base_backend == "hyperswap":
             swapper_path = config.hyperswap_model_path(variant or "1a")
         elif base_backend == "reswapper":
             swapper_path = config.reswapper_model_path(variant or "128")
         else:
-            swapper_path = default_inswapper
+            swapper_path = config.inswapper_model_path()
 
         # Backend and detector descriptions.
         if args.backend == "insightface":
