@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morgana"
+version = "0.1.0"
+description = "Lightweight, modular face swapping pipeline using ONNX and InsightFace."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Faceswap Contributors" }]
+dependencies = [
+    "numpy",
+    "opencv-python-headless",
+    "Pillow",
+    "onnx",
+    "insightface",
+    "torch",
+    "tqdm",
+]
+
+[project.scripts]
+morgana = "morgana.cli.main:main"
+
+[tool.setuptools]
+packages = ["morgana"]
+
