@@ -14,9 +14,8 @@ dependencies = [
     "opencv-python-headless",
     "Pillow",
     "onnx",
-    "insightface",
+    "onnxruntime",
     "torch",
-    "tqdm",
 ]
 
 [project.scripts]
@@ -24,4 +23,3 @@ morgana = "morgana.cli.main:main"
 
 [tool.setuptools]
 packages = ["morgana"]
-
