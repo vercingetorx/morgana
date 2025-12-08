@@ -15,13 +15,13 @@ def models_root() -> Path:
     return (here.parent / "models").resolve()
 
 
-def default_detector_path() -> Path:
+def detector_model_path() -> Path:
     # Buffalo_l detector (SCRFD det_10g.onnx)
     path = models_root() / "buffalo_l" / "det_10g.onnx"
     return ensure_model_file(path, models_root())
 
 
-def default_arcface_path() -> Path:
+def arcface_model_path() -> Path:
     # Prefer the unpacked ArcFace ONNX (w600k_r50.onnx) that ships in
     # models/buffalo_l. Older layouts may still use buffalo_l.zip; callers
     # that want to support that can pass a .zip path directly to ArcFaceEmbedder.
@@ -29,16 +29,8 @@ def default_arcface_path() -> Path:
     return ensure_model_file(path, models_root())
 
 
-def default_swapper_path() -> Path:
+def inswapper_model_path() -> Path:
     path = models_root() / "insightface" / "inswapper_128.onnx"
-    return ensure_model_file(path, models_root())
-
-
-def default_hyperswap_path() -> Path:
-    """
-    Default Hyperswap model path (non-NSFW variant).
-    """
-    path = models_root() / "hyperswap" / "hyperswap_1a_256.onnx"
     return ensure_model_file(path, models_root())
 
 
