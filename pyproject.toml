@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Lightweight, modular face swapping pipeline."
 readme = "README.md"
 requires-python = ">=3.9"
-authors = [{ name = "Faceswap Contributors" }]
+authors = [{ name = "vercingetorx" }]
 dependencies = [
     "numpy",
     "opencv-python-headless",
