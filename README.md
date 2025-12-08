@@ -171,10 +171,10 @@ In practice:
 
 ### Build and save an identity only
 
-You can build an identity without swapping, for either backend:
+You can build an identity once and reuse it later:
 
 ```bash
-# Build a pose-aware identity and save it (core backend)
+# Build a pose-aware identity and save it
 python -m morgana.cli.main \
   --backend core \
   --source ref_faces/ \
@@ -182,13 +182,6 @@ python -m morgana.cli.main \
   --build-identity \
   --output identities/alice_pose.npz
 
-# Same idea using the InsightFace backend
-python -m morgana.cli.main \
-  --backend insightface \
-  --source ref_faces/ \
-  --identity-mode average \
-  --build-identity \
-  --output identities/alice_avg.npz
 ```
 
 If `--output` is omitted with `--build-identity`, the identity is saved to `identity.npz` in the current directory.
