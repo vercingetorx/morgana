@@ -113,8 +113,8 @@ High‑level steps (both backends, INSwapper/Hyperswap/ReSwapper):
 - Uses `insightface.app.FaceAnalysis` for detection + embeddings.
 - Swapper choice:
   - `--swapper inswapper` → InsightFace INSwapper.
-  - `--swapper hyperswap-*` → your `HyperswapONNX` wrapper.
-  - `--swapper reswapper-*` → your `ReSwapperONNX` wrapper.
+  - `--swapper hyperswap-*` → `HyperswapONNX` wrapper.
+  - `--swapper reswapper-*` → `ReSwapperONNX` wrapper.
 - Supports `--identity-mode average|pose` and uses the same identity‑building logic as the core backend.
 
 ### Core backend (`--backend core`)
